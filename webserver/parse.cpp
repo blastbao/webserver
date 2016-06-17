@@ -171,7 +171,7 @@ string tyhp_get_value_from_http_header(const string& key, const tyhp_header& hea
 	tyhp_header::const_iterator cit = header.find(key);
 	if(cit == header.end())
 		return "";
-	return (*cit).second;
+	return (*cit).second;	//(*cit).first、(*cit).second、
 }
 
 
@@ -179,16 +179,14 @@ string tyhp_get_value_from_http_header(const string& key, const tyhp_header& hea
 {
 	tyhp_http_header_t *phttphdr = tyhp_alloc_http_header();
 	string http_request(
-
-"GET /home/zxh HTTP1.1\r\n\
-Lengh: 8080\r\n\
-Date: July Mon 2013\r\n\
-\r\n\
-<html>\n\
-\thaha\n\
-</html>"
-
-);
+		"GET /home/zxh HTTP1.1\r\n\
+		Lengh: 8080\r\n\
+		Date: July Mon 2013\r\n\
+		\r\n\
+		<html>\n\
+		\thaha\n\
+		</html>"
+	);
 	cout<<"http_request size:"<<http_request.size()<<endl;
 	tyhp_parse_http_request(http_request, phttphdr);
 

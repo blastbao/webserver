@@ -127,7 +127,7 @@ char tyhp_noimplemented[] = 	"No Implemented";
  *函数参数：HTTP状态码
  *函数返回值: 相应的语句
  */
-char *tyhp_get_state_by_codes(int http_codes);
+char * tyhp_get_state_by_codes(int http_codes);
 /******************************************************************************************/
 
 /***********************************  HTTP响应首部  *******************************************/

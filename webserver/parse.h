@@ -24,13 +24,13 @@ typedef map<string, string> 	tyhp_header;
 //保存从http request解析下来的值
 typedef struct _tyhp_http_header_t
 {
-	string 		method;
-	string 		url;
-	string		version;
+	string 		method;	 //GET、POST...
+	string 		url;   	 //http://www.blastbao.com?a=1&b=2...
+	string		version; //http1.0 、http2.0
 
-	tyhp_header header;
+	tyhp_header header;  //请求头(Map结构)
 
-	string 	body;
+	string 	body;		 //请求正文
 }tyhp_http_header_t;
 
 /*
